@@ -35,7 +35,7 @@ jobs:
         run: |
           pnpm run dist:linux deb
         env:
-          CSC_IDENTITY_AUTO_DISCOVERY: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
